@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import styles from './App.module.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import React, { useState } from 'react';
+// import logo from './logo.svg';
+// import styles from './App.module.css';
+// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import Title from './components/Title/Title';
+import Button from './components/Button/Button'
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
-
   return (
-    <BrowserRouter>
+    <div>
+      <Title>My Title</Title>
+      <Button>Button</Button>
+    </div>
+  );
+}
+
+export default App;
+
+/* <BrowserRouter>
       <div className={styles.App}>
         <header className={styles['App-header']}>
           <img src={logo} className={styles['App-logo']} alt="logo" />
@@ -49,8 +59,4 @@ function App(): JSX.Element {
           </Switch>
         </header>
       </div>
-    </BrowserRouter>
-  );
-}
-
-export default App;
+    </BrowserRouter>*/
