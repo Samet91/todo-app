@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: #7f5af0;
+  color: white;
+  font-size: small;
+}

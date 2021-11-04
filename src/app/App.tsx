@@ -1,16 +1,64 @@
 // import React, { useState } from 'react';
 // import logo from './logo.svg';
-// import styles from './App.module.css';
+//import styles from './App.module.css';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import Title from './components/Title/Title';
-import Button from './components/Button/Button'
+import Todo from './components/Todo/Todo';
+import CreateTask from './components/CreateTask/CreateTask';
 
 function App(): JSX.Element {
+  const [todos, setTodos] = useState([
+    {
+      title: 'Aufräumen',
+      description: 'Schuhe',
+      isDone: true,
+    },
+    {
+      title: 'Einkaufen',
+      description: 'Tomaten',
+      isDone: true,
+    },
+    {
+      title: 'Projekte(IT)',
+      description: 'React',
+      isDone: true,
+    },
+    {
+      title: 'CV',
+      description: 'React',
+      isDone: true,
+    },
+    {
+      title: 'Check-up',
+      description: 'Arzt',
+      isDone: true,
+    },
+  ]);
+
+  function handleSubmit(todo: {
+    title: string;
+    description: string;
+    isDone: boolean;
+  }) {
+    const newTodos = [todo, ...todos];
+    setTodos(newTodos);
+    console.log(todo);
+    console.log(newTodos);
+  }
+
   return (
     <div>
-      <Title>My Title</Title>
-      <Button>Button</Button>
+      <Title>Todo-Liste</Title>
+
+      <CreateTask onSubmit={handleSubmit}></CreateTask>
+
+      <ul>
+        <Todo isDone={true} title={'Aufräumen'} description={'Schuhe'}></Todo>
+        <Todo isDone={true} title={'Einkaufen'} description={'Tomaten'}></Todo>
+        <Todo isDone={true} title={'Projekte(IT)'} description={'React'}></Todo>
+        <Todo isDone={true} title={'CV'} description={'React'}></Todo>
+      </ul>
     </div>
   );
 }

@@ -1,4 +1,9 @@
 .title {
   background-color: blueviolet;
   color: cornsilk;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  text-shadow: 4px 3px 0 #7a7a7a;
 }
