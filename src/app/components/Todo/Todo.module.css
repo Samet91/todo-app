@@ -1,0 +1,22 @@
+.div_true {
+  background-color: crimson;
+  border-radius: 10px;
+}
+
+.div_false {
+  background-color: #2cb67d;
+}
+
+.h1 {
+  margin: 10px;
+}
+
+.li {
+  display: flex;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
