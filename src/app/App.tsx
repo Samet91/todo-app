@@ -40,19 +40,17 @@ function App(): JSX.Element {
     <div>
       <Title>Todo-Liste</Title>
       <ul>
-      <CreateTask onSubmit={handleSubmit}/>
-      {todos.map((todo) => (
-        <Todo
-          title={todo.title}
-          description={todo.description}
-          isDone={todo.isDone}
-        />
-      ))}
-      
+        <CreateTask onSubmit={handleSubmit} />
+        {todos.map((todo) => (
+          <Todo
+            title={todo.title}
+            description={todo.description}
+            isDone={todo.isDone}
+          />
+        ))}
       </ul>
     </div>
   );
 }
 
 export default App;
-

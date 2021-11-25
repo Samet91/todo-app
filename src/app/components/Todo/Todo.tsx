@@ -9,10 +9,10 @@ type TodoProps = {
 function Todo({ isDone, title, description }: TodoProps): JSX.Element {
   return (
     <div className={classes.todo_container}>
-    <li className={isDone ? classes.div_true : classes.div_false}>
-      <h1 className={classes.h1}>{title}</h1>
-      <p className={classes.li}>{description}</p>
-    </li>
+      <li className={isDone ? classes.div_true : classes.div_false}>
+        <h1 className={classes.h1}>{title}</h1>
+        <p className={classes.li}>{description}</p>
+      </li>
     </div>
   );
 }
