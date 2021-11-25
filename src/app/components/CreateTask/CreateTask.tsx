@@ -12,10 +12,11 @@ type CreateTaskProps = {
 function CreateTask({ onSubmit }: CreateTaskProps): JSX.Element {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  //const [watched, setWatched] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onSubmit({ title, description, isDone:false });
+    onSubmit({ title, description, isDone: true });
   }
 
   return (

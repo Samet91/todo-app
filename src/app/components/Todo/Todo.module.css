@@ -1,5 +1,4 @@
-.div_true,
-.div_false {
+.div_true {
   background-color: crimson;
   border-radius: 10px;
 }
@@ -19,7 +18,5 @@
 
 ul {
   list-style: none;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
 }
